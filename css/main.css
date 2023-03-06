@@ -27,6 +27,16 @@ h1 {
   font-weight: 700;
   color: hsl(0, 0%, 8%);
 }
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
 
 a {
   color: hsl(0, 0%, 8%);

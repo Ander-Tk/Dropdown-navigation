@@ -5,9 +5,15 @@ $MediumGray: hsl(0, 0%, 41%);
 $AlmostBlack: hsl(0, 0%, 8%);
 
 $desk: 768px;
+$desk-xl: 992px;
 
 @mixin desktop {
     @media (min-width: #{$desk}) {
+        @content;
+    }
+}
+@mixin desk-xl {
+    @media (min-width: #{$desk-xl}) {
         @content;
     }
 }
@@ -43,6 +49,12 @@ h1 {
     font-size: 3.5rem;
     font-weight: 700;
     color: $AlmostBlack;
+    @include desktop {
+        font-size: 4.0rem;;
+    }
+    @include desk-xl() {
+        font-size: 5.0rem;;
+    }
 }
 
 a {
