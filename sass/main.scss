@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+$AlmostWhite: hsl(0, 0%, 98%);
+$MediumGray: hsl(0, 0%, 41%);
+$AlmostBlack: hsl(0, 0%, 8%);
+
+$desk: 768px;
+
+@mixin desktop {
+    @media (min-width: #{$desk}) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: #{$desk}) {
+        @content;
+    }
+}
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    background-color: $AlmostWhite;
+    color: $MediumGray;
+}
+
+p {
+    font-size: 18px;
+}
+
+.dropdown-menu {
+    box-shadow: none !important;
+
+    @include desktop {
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    }
+}
+
+.dropdown-item {
+    color: $MediumGray;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: $AlmostBlack;
+}
+
+a {
+    color: $AlmostBlack;
+    .arrowkey { content: url("../images/icon-arrow-down.svg");}
+    &:focus>.arrowkey { content: url("../images/icon-arrow-up.svg");}
+}
+
+.user-btn{
+    background-color:  transparent;
+    border: 0; color: $MediumGray;
+    &:hover{color: $AlmostBlack;}
+}
+.register-btn{
+    background-color: transparent;
+    border: 1px solid $MediumGray;
+    border-radius: 10px; color: $MediumGray;
+    &:hover{
+        border: 1px solid $AlmostBlack;
+        color: $AlmostBlack;
+    }
+    @include mobile(){
+        width: 300px;
+    }
+}
+
+.btn{
+    background-color: $AlmostBlack;
+    color: $AlmostWhite;
+    border-radius: 10px;
+    &:hover{
+        background-color: none;
+        color: $AlmostBlack;
+        border: 1px solid $AlmostBlack;
+        border-radius: 10px;
+    }
+}
