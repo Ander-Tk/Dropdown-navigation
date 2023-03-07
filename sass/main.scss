@@ -5,7 +5,7 @@ $MediumGray: hsl(0, 0%, 41%);
 $AlmostBlack: hsl(0, 0%, 8%);
 
 $desk: 768px;
-$desk-xl: 992px;
+$desk-xl: 1200px;
 
 @mixin desktop {
     @media (min-width: #{$desk}) {
@@ -71,7 +71,7 @@ a {
 .register-btn{
     background-color: transparent;
     border: 1px solid $MediumGray;
-    border-radius: 10px; color: $MediumGray;
+    border-radius: 15px; color: $MediumGray;
     &:hover{
         border: 1px solid $AlmostBlack;
         color: $AlmostBlack;
